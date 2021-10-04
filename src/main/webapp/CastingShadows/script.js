@@ -107,7 +107,7 @@ const start = () => {
     light = {x:w/2,y:h/2}
     canvas.addEventListener("touchstart",touchStart)
     canvas.addEventListener("touchmove",touchStart)
-    for(let i=30;--i;)
+    for(let i=30;--i)
     blocks.push(new Block(Math.random()*w,Math.random()*h,Math.random()*30+1))
     loop()
 }
