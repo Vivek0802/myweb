@@ -18,7 +18,7 @@ pipeline{
         }
         stage("deploy-dev"){
             steps{
-                sshagent(['tomcat-neww']) {
+                sshagent(['e9369726-f3a5-4cce-b45d-a7ef50ae5bb1']) {
                 sh """
                     scp -o StrictHostKeyChecking=no target/laddu.war  ec2-user@172.31.47.114:/home/ec2-user/apache-tomcat-9.0.58/webapps/
                     
