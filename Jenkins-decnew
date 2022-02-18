@@ -7,7 +7,7 @@ pipeline{
     stages{
         stage("Git Checkout"){
             steps{
-                git credentialsId: 'vivekladdu', url: 'https://github.com/Vivek0802/myweb.git'
+                git credentialsId: '03433000-eca7-4929-b3ff-a4bd5a28e5ad', url: 'https://github.com/Vivek0802/myweb.git'
             }
         }
         stage("Maven Build"){
@@ -18,7 +18,7 @@ pipeline{
         }
         stage("deploy-dev"){
             steps{
-                sshagent(['e9369726-f3a5-4cce-b45d-a7ef50ae5bb1']) {
+                sshagent(['03433000-eca7-4929-b3ff-a4bd5a28e5ad']) {
                 sh """
                     scp -o StrictHostKeyChecking=no target/laddu.war  ec2-user@172.31.33.26:/home/ec2-user/apache-tomcat-9.0.58/webapps/
                     
